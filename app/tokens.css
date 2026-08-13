@@ -1,0 +1,36 @@
+/* ---------------------------------------------------------------------------
+   Palette: "Workshop Wood", extended.
+   Swap this one file to re-skin the whole site — components never hardcode hex.
+
+   The base six tokens are the Workshop Wood preset. The `deep` group is derived
+   from --color-ink so the page can alternate an oat ground and an espresso
+   ground with hard cuts at the seams, without leaving the palette.
+
+   Two brass tokens is deliberate: --color-accent reads on the oat ground,
+   --color-brass reads on the espresso. One brass used everywhere silts into the
+   dark and glares on the light.
+--------------------------------------------------------------------------- */
+
+@theme {
+  /* light ground */
+  --color-bg: #f6f1e9; /* oat paper */
+  --color-surface: #fffdf9; /* lifted panel on the oat */
+  --color-ink: #2a211a;
+  --color-muted: #6b5d4f;
+  --color-line: #ddd2c1; /* hairlines, ticks, rebate insets */
+
+  /* dark ground */
+  --color-deep: #1a140f; /* espresso — hero, process band, footer */
+  --color-deep-2: #241c15; /* lifted panel on the espresso */
+  --color-bone: #f2ebe0; /* text on espresso */
+  --color-dim: #9c8c7a; /* secondary text on espresso */
+  --color-line-deep: #3a2e23; /* hairlines on the espresso */
+
+  /* accents */
+  --color-accent: #8b5a2b; /* worn brass/oak — CTAs + numerals on the oat */
+  --color-brass: #c08a4a; /* the same role on the espresso */
+  --color-accent-2: #3f5a44; /* muted forest — labels only, sparing */
+
+  /* motion */
+  --ease-craft: cubic-bezier(0.16, 1, 0.3, 1);
+}
