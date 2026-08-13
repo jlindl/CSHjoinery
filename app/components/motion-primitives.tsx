@@ -35,6 +35,11 @@ const EASE = [0.16, 1, 0.3, 1] as const;
      load, so whileInView may never fire and the headline would sit invisible
      behind its own mask. */
 
+/* The tags this is allowed to render as. Headings are the common case — the
+   reveal wraps each line in a block-level span, which is valid inside any of
+   these. */
+type MaskLinesTag = "span" | "div" | "p" | "h1" | "h2" | "h3" | "h4";
+
 export function MaskLines({
   lines,
   className = "",
@@ -48,7 +53,7 @@ export function MaskLines({
   lineClassName?: string;
   delay?: number;
   immediate?: boolean;
-  as?: "span" | "div";
+  as?: MaskLinesTag;
 }) {
   const reduced = useReducedMotion();
 
